@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vuejs School</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body>
+    <h1>Liste de course</h1>
+
+    <div id="app">
+        <input v-model.lazy=itemName></input>
+
+        <ul>
+            <list v-for="item in list" :elem="item" :key="item.id"></list>
+        </ul>
+
+    </div>
+
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
