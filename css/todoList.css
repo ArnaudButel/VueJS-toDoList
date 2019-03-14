@@ -1,0 +1,13 @@
+ul {
+    list-style-type: none
+}
+.close.icon {
+    font-size: 2em;
+}
+.item.ui.grid.equal.width.row {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}

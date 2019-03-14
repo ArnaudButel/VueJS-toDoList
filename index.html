@@ -3,16 +3,30 @@
 <head>
     <title>Vuejs School</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="css/todoList.css">
 </head>
 <body>
-    <h1>Liste de course</h1>
 
-    <div id="app">
-        <input v-model.lazy=itemName></input>
+    <div id="app" class="ui middle aligned center aligned grid">
+        <div class="column">
+                <h1 class="ui header ">Liste de course</h1>
+                <div class="ui input focus">
+                    <input v-model.lazy=itemName placeholder="produit"></input>
+                </div>
+        
+                <div class="ui relaxed list">
+                    <list v-for="item in list" :elem="item" :key="item.id"></list>
+                </div>
 
-        <ul>
-            <list v-for="item in list" :elem="item" :key="item.id"></list>
-        </ul>
+                
+                <div class="ui right labeled input">
+                    <label for="budget"></label>
+                    <input class="ui mini icon input" id="budget" type="text" placeholder="Budget" v-model="budget">
+                    <label for="amount" class="ui label">€</label>
+                </div>
+                <p>Total : {{ budget }}</p>
+        </div>
 
     </div>
 
