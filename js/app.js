@@ -12,7 +12,7 @@ var ComponentList = {
         </div>`,
     methods: {
         delElmtComp(index) {
-            this.$parent.delElmt(index);
+            this.$parent.delElmt(index)
         },
         upgradeAmountComp() {
             this.$parent.upgradeAmount()
@@ -45,7 +45,6 @@ var app = new Vue({
             });
         },
         upgradeAmount() {
-            amount = 0
             this.list.forEach((elmt, index) => {
                 this.amount += elmt.price
             });

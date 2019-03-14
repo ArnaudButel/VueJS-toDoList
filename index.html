@@ -25,7 +25,8 @@
                     <input class="ui mini icon input" id="budget" type="text" placeholder="Budget" v-model="budget">
                     <label for="amount" class="ui label">€</label>
                 </div>
-                <p>Total : {{ budget }}</p>
+                <p>Total : {{ amount }}</p>
+                <p class="ui red" v-show="amount > budget">Attention budget dépassé !</p>
         </div>
 
     </div>
