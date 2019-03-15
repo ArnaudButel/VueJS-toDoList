@@ -43,6 +43,7 @@ var app = new Vue({
                     Vue.delete(this.list, index);
                 }
             });
+            this.upgradeAmount()
         },
         upgradeAmount() {
             this.amount = 0
