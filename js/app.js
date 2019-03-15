@@ -2,13 +2,13 @@ var ComponentList = {
     props : ['elem'],
     template: `
         <div class="item ui grid equal width row">
-            <input type="checkbox" :id="'produit_' + elem.id" v-model="elem.checked">
-            <label :for="'produit_' + elem.id">{{ elem.text }}</label>
-            <div class="ui right labeled input" v-if="elem.checked">
-                <input class="ui mini icon input" type="text" placeholder="Montant" :id="'price_' + elem.id" v-model.number="elem.price" @change="upgradeAmountComp()">
-                <label for="amount" class="ui label">€</label>
+            <div class="elmt_list"><input type="checkbox" :id="'produit_' + elem.id" v-model="elem.checked"></div>
+            <div class="elmt_list"><label :for="'produit_' + elem.id">{{ elem.text }}</label></div>
+            <div class="ui right labeled input elmt_list">
+                <input class="ui mini icon input" type="text" placeholder="Montant" :id="'price_' + elem.id" v-model.number="elem.price" @change="upgradeAmountComp()" v-if="elem.checked">
+                <label for="amount" class="ui label" v-if="elem.checked">€</label>
             </div>
-            <button class="ui red button"  @click="delElmtComp(elem.id)">Supprimer</button>
+            <div class="elmt_list"><button class="ui red button"  @click="delElmtComp(elem.id)">Supprimer</button></div>
         </div>`,
     methods: {
         delElmtComp(index) {

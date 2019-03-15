@@ -16,17 +16,23 @@
                 </div>
         
                 <div class="ui relaxed list">
+                    <div class="header_list item ui grid equal width row ">
+                        <div class="elmt_list">OK</div>
+                        <div class="elmt_list">Produit</div>
+                        <div class="elmt_list">Prix</div>
+                        <div class="elmt_list">Supprimer</div>
+                    </div>
                     <list v-for="item in list" :elem="item" :key="item.id"></list>
                 </div>
 
                 
                 <div class="ui right labeled input">
-                    <label for="budget"></label>
+                    <label for="budget">Budget </label>
                     <input class="ui mini icon input" id="budget" type="text" placeholder="Budget" v-model="budget">
                     <label for="amount" class="ui label">€</label>
                 </div>
                 <p>Total : {{ amount }}</p>
-                <p class="ui red" v-show="amount > budget">Attention budget dépassé !</p>
+                <p class="ui attached icon error message" v-show="amount > budget">Attention budget dépassé !</p>
         </div>
 
     </div>

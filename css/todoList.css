@@ -11,3 +11,14 @@ ul {
     align-items: center;
     margin: auto;
 }
+.elmt_list {
+    width: 200px;
+    max-width: 20%;
+}
+.header_list {
+    font-weight: bold;
+    background-color: #222;
+    color: white;
+    padding: 10px 0!important;
+    border-radius: 5px;
+}
