@@ -45,6 +45,7 @@ var app = new Vue({
             });
         },
         upgradeAmount() {
+            this.amount = 0
             this.list.forEach((elmt, index) => {
                 this.amount += elmt.price
             });
